@@ -15,11 +15,16 @@ OpenLayers.Request.DEFAULT_CONFIG.headers = {
 
 /**
  *  Add GetFeedFeatureInfo tool to GeoExplorer.Viewer
+ *  ICT4EO - Bolelang: Added Playback Tool for WMS-T display to GeoExplorer.View
  */
 GeoExplorer.Viewer.prototype.loadConfig = function(config) {
         config.viewerTools.push( {
             ptype: "gxp_getfeedfeatureinfo",
             checked: true
+        },{
+            ptype: "gxp_playback", // Time playback tool - added by ICT4EO - Bolelang
+            id: "playbar",
+            checked: true,
         });
 
     // Do not include the layer styler on the map-detail view.
